@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tradofy - Futuristic Neon Logo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -18,8 +18,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Orbitron', monospace;
+            font-family: "Orbitron", monospace;
             overflow: hidden;
+            color: #00d4ff;
         }
 
         .logo-container {
@@ -61,18 +62,25 @@
             fill: none;
             stroke: #00d4ff;
             stroke-width: 3;
-            filter: drop-shadow(0 0 10px #00d4ff) drop-shadow(0 0 20px #007bff) drop-shadow(0 0 30px #0056b3);
+            filter: drop-shadow(0 0 10px #00d4ff)
+                drop-shadow(0 0 20px #007bff)
+                drop-shadow(0 0 30px #0056b3);
             animation: iconPulse 3s ease-in-out infinite;
         }
 
         @keyframes iconPulse {
-            0%, 100% {
+            0%,
+            100% {
                 stroke-width: 3;
-                filter: drop-shadow(0 0 10px #00d4ff) drop-shadow(0 0 20px #007bff) drop-shadow(0 0 30px #0056b3);
+                filter: drop-shadow(0 0 10px #00d4ff)
+                    drop-shadow(0 0 20px #007bff)
+                    drop-shadow(0 0 30px #0056b3);
             }
             50% {
                 stroke-width: 4;
-                filter: drop-shadow(0 0 15px #00d4ff) drop-shadow(0 0 30px #007bff) drop-shadow(0 0 45px #0056b3);
+                filter: drop-shadow(0 0 15px #00d4ff)
+                    drop-shadow(0 0 30px #007bff)
+                    drop-shadow(0 0 45px #0056b3);
             }
         }
 
@@ -81,7 +89,7 @@
             font-weight: 900;
             letter-spacing: 8px;
             color: #ffffff;
-            text-shadow: 
+            text-shadow:
                 0 0 5px #00d4ff,
                 0 0 10px #00d4ff,
                 0 0 15px #00d4ff,
@@ -96,7 +104,7 @@
 
         @keyframes textGlow {
             0% {
-                text-shadow: 
+                text-shadow:
                     0 0 5px #00d4ff,
                     0 0 10px #00d4ff,
                     0 0 15px #00d4ff,
@@ -105,7 +113,7 @@
                     0 0 40px #0056b3;
             }
             100% {
-                text-shadow: 
+                text-shadow:
                     0 0 10px #00d4ff,
                     0 0 20px #00d4ff,
                     0 0 30px #00d4ff,
@@ -117,7 +125,7 @@
 
         .logo-text .highlight {
             color: #00d4ff;
-            text-shadow: 
+            text-shadow:
                 0 0 10px #00d4ff,
                 0 0 20px #00d4ff,
                 0 0 30px #00d4ff,
@@ -160,7 +168,8 @@
         }
 
         @keyframes orbPulse {
-            0%, 100% {
+            0%,
+            100% {
                 transform: translate(-50%, -50%) scale(1);
                 opacity: 0.3;
             }
@@ -331,13 +340,11 @@
         <div class="logo-wrapper">
             <div class="logo-icon">
                 <svg class="t-icon" viewBox="0 0 80 80">
-                    <!-- Futuristic T icon with circuit-like design -->
                     <path d="M15 20 L65 20 M40 20 L40 60 M25 35 L40 35 M40 35 L55 35" stroke-linecap="round" stroke-linejoin="round"/>
                     <circle cx="40" cy="20" r="3" fill="#00d4ff"/>
                     <circle cx="40" cy="60" r="3" fill="#00d4ff"/>
                     <circle cx="25" cy="35" r="2" fill="#007bff"/>
                     <circle cx="55" cy="35" r="2" fill="#007bff"/>
-                    <!-- Additional tech elements -->
                     <rect x="38" y="45" width="4" height="8" rx="2" fill="#00d4ff" opacity="0.7"/>
                     <polygon points="15,18 15,22 17,20" fill="#00d4ff"/>
                     <polygon points="65,18 65,22 63,20" fill="#00d4ff"/>
@@ -376,7 +383,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             createParticles();
             
-            // Add click interaction
             document.querySelector('.logo-container').addEventListener('click', () => {
                 document.querySelector('.logo-text').style.animation = 'textGlow 0.5s ease-in-out';
                 setTimeout(() => {
@@ -385,14 +391,18 @@
             });
         });
 
-        // Add mouse movement effect
+        // Mouse movement effect for orb
         document.addEventListener('mousemove', (e) => {
             const orb = document.querySelector('.glow-orb');
             const x = (e.clientX / window.innerWidth) * 20 - 10;
             const y = (e.clientY / window.innerHeight) * 20 - 10;
             orb.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
         });
+
+        // Redirect to login.html after 3 seconds
+        setTimeout(() => {
+            window.location.href = "login.html";
+        }, 3000);
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96e1d549074ac867',t:'MTc1NTAyMTIxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-  </html>
-  
+</body>
+</html>
